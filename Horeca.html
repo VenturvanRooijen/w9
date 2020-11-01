@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horeca App</title>
+</head>
+<body>
+	<script>
+		var bier = 2.50;
+		var wijn = 5.00;
+		var fris = 1.50;
+
+		function HorecaBestelling(){
+			var artikel = prompt("welke bestelling wilt u toevoegen? U kan kiezen uit fris, bier of wijn")
+			if(artikel === "bier" || artikel === "wijn" || artikel === "fris") {
+				var aantal = prompt("Hoeveel " + artikel + " wilt u toevoegen aan uw bestelling?")
+				HorecaBestelling();}
+			else if(artikel == "stop"){
+				document.write("hier is de rekening:" + "<br>");
+				document.write(aantal + "x" + artikel + "<br>");
+				document.write("Totaalbedrag:" + (artikel + aantal));
+			}
+			
+			else{
+				alert("Dit artikel stond niet op de lijst van keuzes, probeer opnieuw");
+			}
+		}
+
+
+			HorecaBestelling();
+	</script>
+
+</body>
+</html>
